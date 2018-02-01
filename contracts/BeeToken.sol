@@ -72,11 +72,11 @@ contract BeeToken is StandardToken, BurnableToken, Ownable {
      * @param admin Address of admin account
      */
     function BeeToken(address admin) public {
-        totalSupply = INITIAL_SUPPLY;
+        totalSupply_ = INITIAL_SUPPLY;
         
         // Mint tokens
-        balances[msg.sender] = totalSupply;
-        Transfer(address(0x0), msg.sender, totalSupply);
+        balances[msg.sender] = totalSupply_;
+        Transfer(address(0x0), msg.sender, totalSupply_);
 
         // Approve allowance for admin account
         adminAddr = admin;
